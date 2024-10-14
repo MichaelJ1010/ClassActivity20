@@ -1,5 +1,6 @@
 #include <iostream>
 #include "./userInput.hpp"
+#include "./sumOfArray.hpp"
 
 using namespace std;
 
@@ -27,10 +28,9 @@ namespace input{
                 delete numbers;
                 numbers = nullptr;
                 numbers = temporaryArray;
-                // delete temporaryArray;
-                // temporaryArray = nullptr;
             }
         }
-        
+        int sum = arraySum::sumOfArray(numbers, entries);
+        cout << "sum of all ints: " << sum << endl;
     }
 }
